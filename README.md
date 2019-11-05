@@ -343,7 +343,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 ----------
 ----------
-# 2019'11'05 modifications:
+# 2019.11.05 Memo:
 By Morgan
 
 ## Description
@@ -358,7 +358,7 @@ So I take a little modifications.
 ## Software Requirements
 The content is the same with bbtinkerer. For speedly installing these software, I attach some hints in here.
 * LIRC - please refer the [artical](https://stackoverflow.com/questions/57437261/setup-ir-remote-control-using-lirc-for-the-raspberry-pi-rpi)
-* Node.js - download the bin file and firectly copy to /usr/local, please download this [website](https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/)
+* Node.js - download the bin file and firectly copy to /usr/local, please refer this [website](https://www.instructables.com/id/Install-Nodejs-and-Npm-on-Raspberry-Pi/)
 * nodemon - please switch to power user (cmd: sudo -s), and run this command: "npm install -g nodemon"
 
 ## Installation and Modifications
