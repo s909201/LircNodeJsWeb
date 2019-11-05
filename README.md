@@ -340,3 +340,65 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+----------
+----------
+# 2019'11'05 modifications:
+By Morgan
+
+## Description
+The original project can't be run under npm(6.12.0) and Node.js(v12.13.0).
+So I take a little modifications.
+
+## Hardware Requirements
+* Raspberry Pi 3B+
+* TSOP38238
+* TSAL 6200 or 6400
+
+## Software Requirements
+The content is the same with bbtinkerer. For speedly installing these software, I attach some hints in here.
+* LIRC - please refer the [artical](https://stackoverflow.com/questions/57437261/setup-ir-remote-control-using-lirc-for-the-raspberry-pi-rpi)
+* Node.js - download the bin file and firectly copy to /usr/local, please download in [here](https://nodejs.org/en/download/)
+* nodemon - please switch to power user (cmd: sudo -s), and run this command: "npm install -g nodemon"
+
+## Installation and Modifications
+
+Clone this project to /home/pi/nodejs/LircNodeJsWeb, download required depencencies, and copy the example config files.
+
+```bash
+cd ~
+mkdir nodejs
+cd nodejs
+git clone https://github.com/bbtinkerer/LircNodeJsWeb.git
+cd LircNodeJsWeb/config/ 
+cp default.example.json default.json
+cp production.example.json production.json
+cd ..
+npm install (for installing express)
+```
+Then modifying the files package.json and routes/index.js.
+For more detail information, please refer the codes.
+
+Don't forget to add the new IR config files to LIRC library.
+```bash
+sudo cp ./exampleConfigs/lircRemotes/*.* /etc/lirc/lircd.conf.d/
+```
+Finally, runing nodemon command 
+```bash
+sudo PORT=80 npm start
+```
+
+## Result Snap:
+
+![Browser](https://3.bp.blogspot.com/-QhtBGFRulXM/XcErBo4iKlI/AAAAAAAASf4/Yljz9nBhXN0rABixEt_UF6z0THPPC6H9ACLcBGAsYHQ/s1600/24.png)
+
+Console screen:
+![console](https://4.bp.blogspot.com/-cUFqWxsNqH0/XcEhZ-j2G0I/AAAAAAAASfk/8K1FD_HeXcQC7g1CXRt1pPo3NakM-GbIgCLcBGAsYHQ/s1600/22.png)
+
+Real environment:
+![Real](https://3.bp.blogspot.com/-BLxmsH5_gS4/XcEhnr5_NyI/AAAAAAAASfo/HfSePST5JlcmK4jEoXrMM2fpqTUeczijACLcBGAsYHQ/s1600/evk.jpg)
+
+
+## Authors
+
+* Morgan Chuang (https://github.com/s909201/)
