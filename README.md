@@ -392,10 +392,8 @@ sudo PORT=80 npm start
 
 ![Browser](https://3.bp.blogspot.com/-QhtBGFRulXM/XcErBo4iKlI/AAAAAAAASf4/Yljz9nBhXN0rABixEt_UF6z0THPPC6H9ACLcBGAsYHQ/s1600/24.png)
 
-Console screen:
 ![console](https://4.bp.blogspot.com/-cUFqWxsNqH0/XcEhZ-j2G0I/AAAAAAAASfk/8K1FD_HeXcQC7g1CXRt1pPo3NakM-GbIgCLcBGAsYHQ/s1600/22.png)
 
-Real environment:
 ![Real](https://3.bp.blogspot.com/-BLxmsH5_gS4/XcEhnr5_NyI/AAAAAAAASfo/HfSePST5JlcmK4jEoXrMM2fpqTUeczijACLcBGAsYHQ/s1600/evk.jpg)
 
 
